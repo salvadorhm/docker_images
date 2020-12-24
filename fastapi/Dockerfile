@@ -12,12 +12,14 @@ EXPOSE 8000
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
-RUN pip3 install fastapi
-RUN pip3 install uvicorn
-RUN pip3 install sqlalchemy
-RUN pip3 install mysql-connector-python
-RUN pip3 install bcrypt
-RUN pip3 install async-exit-stack async-generator
+#RUN pip3 install pip --upgrade
+RUN pip3 install --no-cache-dir fastapi
+RUN pip3 install --no-cache-dir uvicorn
+RUN pip3 install --no-cache-dir sqlalchemy
+RUN pip3 install --no-cache-dir mysql-connector-python
+RUN pip3 install --no-cache-dir bcrypt
+RUN pip3 install --no-cache-dir async-exit-stack async-generator
 
-RUN apt-get remove -y python3-pip 
+#RUN pip3 cache purge
 RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get remove -y python3-pip
