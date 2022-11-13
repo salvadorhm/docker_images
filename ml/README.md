@@ -23,3 +23,8 @@ $ docker ps
 ```bash
 $ docker logs nombre_contenedor
 ```
+
+## Jupyter 
+
+8888-salvadorhm-dockerimages-atdkp8zjlr6.ws-us74.gitpod.io
+
