@@ -1,0 +1,22 @@
+FROM jupyter/pyspark-notebook
+
+
+# LABEL about the custom image
+LABEL maintainer="salvadorhm@gmail.com"
+LABEL version="1"
+LABEL description="Machine learning"
+
+# Definbe ENV files
+ENV requirements /home/requirements.txt
+
+# Copy requirements file
+COPY requirements.txt ${requirements}
+
+# Install packages
+RUN python -m pip install --upgrade pip
+
+
+# Install python packages
+RUN pip3 install --no-cache-dir -r /home/requirements.txt
+
+EXPOSE 8888
