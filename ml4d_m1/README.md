@@ -1,0 +1,1 @@
+docker build -t salvadorhm/ml4d_m1:0.79 .
